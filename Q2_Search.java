@@ -18,7 +18,7 @@ class Main {
     //未探索範囲の最小値
     int min = 0;
     //未探索範囲の最大値
-    int max = sortedArray.length;
+    int max = sortedArray.length - 1;
 
     while(min <= max){
       //次に確認するindex
