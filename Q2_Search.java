@@ -15,6 +15,31 @@ class Main {
 
     // ‚±‚±‚©‚ç‹Lq
 
+    //–¢’Tõ”ÍˆÍ‚ÌÅ¬’l
+    int min = 0;
+    //–¢’Tõ”ÍˆÍ‚ÌÅ‘å’l
+    int max = sortedArray.length;
+
+    while(min <= max){
+      //Ÿ‚ÉŠm”F‚·‚éindex
+      int index = (max + min) / 2;
+
+      //’Tõ‘ÎÛ‚Æ’†ŠÔ‚Ì’l‚ªˆê’v‚µ‚½ê‡
+      if(sortedArray[index] == targetNumber) {
+        //’Tõ‘ÎÛ‚ªŒ©‚Â‚©‚Á‚½‚Ì‚Åindex‚ğ•Ô‹p
+        return index;
+      }
+      //’Tõ‘ÎÛ‚ª’†ŠÔ‚Ì’l‚æ‚è‘å‚«‚¢ê‡
+      else if(sortedArray[index] < targetNumber) {
+        //’Tõ”ÍˆÍ‚ğŒ»İ‚ÌindexˆÈ~‚É‚·‚é
+        min = index + 1;
+      }
+      //’Tõ‘ÎÛ‚ª’†ŠÔ‚Ì’l‚æ‚è¬‚³‚¢ê‡
+      else{
+        //’Tõ”ÍˆÍ‚ğŒ»İ‚ÌindexˆÈ‘O‚É‚·‚é
+        max = index - 1;
+      }
+    }
 
     // ‚±‚±‚Ü‚Å‹Lq
 
